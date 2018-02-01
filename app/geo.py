@@ -48,3 +48,23 @@ def calc_dist(rad, lat1, lon1, lat2, lon2):
         (float) the distance between two coordinates
     """
     return rad * _cen_angle(lat1, lon1, lat2, lon2)
+
+def is_prop_latlon(latlon, mode=True):
+    """Check if the latitude/longitude is proper.
+
+    Args:
+        latlon: latitude to check in degrees (str)
+        mode: runs the method to check properness of latitude or longitude.
+            if True, the method runs for latitude; else for longitude.
+    Returns:
+        (boolean) True if latitude is proper, else False
+    """
+    if latlon == 'NaN': return False
+    if mode: val = 90
+    else: val = 180
+    try:
+        l = float(latlon)
+        if ((l > val) or (l < -val)): return False
+        return True
+    except ValueError:
+        return False
