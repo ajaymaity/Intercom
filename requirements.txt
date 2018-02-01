@@ -1,2 +1,2 @@
-configparser
-six
+configparser==3.5.0
+six==1.11.0
