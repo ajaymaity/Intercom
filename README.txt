@@ -1,0 +1,1 @@
+## This application is written as part of Intercom Take Home Test.
