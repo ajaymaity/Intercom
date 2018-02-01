@@ -7,7 +7,7 @@
 # To run the application, follow the steps below:
 1. Install the required packages
 ```
-pip install -r requirements.py
+pip install -r requirements.txt
 ```
 2. Run the main program
 ```
